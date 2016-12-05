@@ -1,0 +1,90 @@
+// AttendanceCard.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (AttendanceCard.tlb) that will become a resource in
+// AttendanceCard.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(2A13B742-32A1-486B-92E3-0D945F1E2C73), version(1.0),
+  helpfile("AttendanceCard.hlp"),
+  helpstring("AttendanceCard ActiveX Control module"),
+  control ]
+library ATTENDANCECARDLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CAttendanceCardCtrl
+
+	[ uuid(2434E974-5536-421F-AC30-5D5730EB7D98),
+	  helpstring("Dispatch interface for AttendanceCard Control"), hidden ]
+	dispinterface _DAttendanceCard
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAttendanceCardCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAttendanceCardCtrl)
+			[id(1)] boolean Init(short port);
+			[id(2)] void Quit();
+			[id(3)] short GetCardType();
+			[id(4)] BSTR ReadMainData(short Adr);
+			[id(5)] boolean WriteMainData(short Adr, BSTR Data);
+			[id(6)] BSTR ReadAttendanceData();
+			[id(7)] boolean WriteAttendanceData(BSTR Data);
+			[id(8)] double GetCurrentBalance();
+			[id(9)] long GetCurrentUsingTimes();
+			[id(10)] short Charge(short Money);
+			[id(11)] boolean DispOnLED(double Money);
+			[id(12)] boolean Beep(short Time);
+			[id(13)] DATE GetLastAttTime();
+			[id(14)] DATE GetExpiryDate();
+			[id(15)] void Halt();
+			[id(16)] BSTR GetLocalIp();
+			[id(17)] BSTR GetCardID();
+			[id(18)] short GetUserType();
+			[id(19)] BSTR GetBarcode();
+			[id(20)] boolean InitBarcodeDev(short port);
+			[id(21)] boolean BeepEx(short volume, short times);
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CAttendanceCardCtrl
+
+	[ uuid(C9671B1E-65DA-4E7B-8363-871F89FB3E13),
+	  helpstring("Event interface for AttendanceCard Control") ]
+	dispinterface _DAttendanceCardEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CAttendanceCardCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CAttendanceCardCtrl
+
+	[ uuid(9EE82E7F-0B57-4058-8C44-A3B0BBCFEEA1), licensed,
+	  helpstring("AttendanceCard Control"), control ]
+	coclass AttendanceCard
+	{
+		[default] dispinterface _DAttendanceCard;
+		[default, source] dispinterface _DAttendanceCardEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

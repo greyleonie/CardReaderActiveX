@@ -1,0 +1,20 @@
+[OPTIONS]
+CONTENTS=main_index
+TITLE=ATTENDANCECARD Control Help
+COMPRESS=true
+WARNING=2
+HLP=AttendanceCard.hlp
+ERRORLOG=AttendanceCard.log
+
+[FILES]
+hlp\AttendanceCard.rtf
+
+[BITMAPS]
+; miscellaneous
+hlp\Bullet.bmp
+
+[ALIAS]
+HIDD_ABOUTBOX_ATTENDANCECARD = HID_APP_ABOUT_ATTENDANCECARD
+
+[MAP]
+#include <hlp\AttendanceCard.hm>

@@ -1,0 +1,19 @@
+Microsoft (R) Help Compiler
+HCRTF 4.03.0002
+Copyright (c) Microsoft Corp 1990 - 1995. All rights reserved.
+attendancecard.hpj
+    HC1002: Note: 
+	Using existing phrase table: AttendanceCard.ph.
+    HC1010: Note: 
+	The following mapped Topic IDs were not used in any topic:
+	HIDD_PROPPAGE_ATTENDANCECARD
+3	Topics
+0	Jumps
+0	Keywords
+1	Bitmap
+
+
+Created D:\GREY\PROJECT\¿¼ÇÚ»ú\V3\¶Á¿¨Æ÷\WORKSPACE\AttendanceCard\AttendanceCard.hlp, 6,515 bytes
+Phrase+Zeck compression decreased help file by 72 bytes.
+Compile time: 0 minutes, 0 seconds
+2 notes, 0 warnings
